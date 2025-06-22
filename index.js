@@ -63,3 +63,28 @@ const postList = document.getElementById('post-list');
                 postList.appendChild(postItem);
             });
         }
+        function handlePostClick(post) {
+            currentPostId = post.id;
+            
+            postDetail.innerHTML = `
+                <div class="post-detail">
+                    <h2>${post.title}</h2>
+                    <div class="post-detail-meta">
+                        <div class="author"><i class="fas fa-user"></i> ${post.author}</div>
+                        <div class="date"><i class="fas fa-calendar"></i> ${post.date}</div>
+                    </div>
+                    ${post.image ? `<img src="${post.image}" alt="${post.title}">` : ''}
+                    <div class="post-content">
+                        <p>${post.content}</p>
+                    </div>
+                    <div class="post-actions">
+                        <button id="edit-btn" class="btn btn-warning"><i class="fas fa-edit"></i> Edit</button>
+                        <button id="delete-btn" class="btn btn-danger"><i class="fas fa-trash"></i> Delete</button>
+                    </div>
+                </div>
+            `;
+            document.getElementById('edit-btn').addEventListener('click', () => showEditForm(post));
+            document.getElementById('delete-btn').addEventListener('click', () => deletePost(post.id));
+        
+            renderPostList(posts);
+        }
