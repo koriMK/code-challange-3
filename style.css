@@ -130,3 +130,75 @@
             cursor: pointer;
             transition: var(--transition);
         }
+        .post-item:hover {
+            background: var(--light-gray);
+        }
+        
+        .post-item.active {
+            background: #e6eeff;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .post-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+        
+        .post-meta {
+            display: flex;
+            align-items: center;
+            color: var(--gray);
+            font-size: 0.9rem;
+            gap: 10px;
+        }
+        
+        .author {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .author i {
+            font-size: 0.8rem;
+        }
+        
+        .post-detail {
+            padding: 25px;
+        }
+        
+        .post-detail h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .post-detail-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            color: var(--gray);
+        }
+        
+        .post-content {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #444;
+        }
+        
+        .post-content img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: var(--shadow);
+        }
+        
+        .post-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+        
