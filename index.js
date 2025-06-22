@@ -17,3 +17,17 @@ const postList = document.getElementById('post-list');
             displayPosts();
             setupEventListeners();
         }
+        async function displayPosts() {
+            try {
+                const response = await fetch(API_URL);
+                posts = await response.json();
+                 postCountElement.textContent = `${posts.length} ${posts.length === 1 ? 'post' : 'posts'}`;
+                  renderPostList(posts);
+                  
+                if (posts.length > 0) {
+                    handlePostClick(posts[0]);
+                }
+            } catch (error) {
+                console.error('Error fetching posts:', error);
+            }
+        }
