@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Pulse - Modern Blog Management</title>
+    <link rel="stylesheet" href="https://cdnj<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Pulse - Modern Blog Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">s.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-blog"></i>
+                    <div>
+                        <h1>Post Pulse</h1>
+                        <p>Modern blog post management</p>
+                    </div>
+                </div>
+                <div class="stats">
+                    <h3 id="post-count">4 posts</h3>
+                    <p>Total articles</p>
+                </div>
+            </div>
+        </div>
+    </header>  
+     <div class="container">
+        <div class="main-content">
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>Blog Posts</h2>
+                    <div class="post-count">4 posts</div>
+                </div>
+                <div class="post-list" id="post-list">
+                </div>
+            </div>
+            
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>Post Details</h2>
+                </div>
+                <div id="post-detail">
+                    <div class="empty-state">
+                        <i class="fas fa-file-alt"></i>
+                        <h3>No Post Selected</h3>
+                        <p>Select a post from the list to view its content</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="form-container" id="new-post-form-container">
+            <div class="form-header">
+                <h3><i class="fas fa-plus-circle"></i> Add New Post</h3>
+            </div>
+            <form id="new-post-form">
+                <div class="form-group">
+                    <label for="title">Post title</label>
+                    <input type="text" id="title" class="form-control" placeholder="Post title...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="author">Author name</label>
+                    <input type="text" id="author" class="form-control" placeholder="Author name...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="image">Image URL</label>
+                    <input type="text" id="image" class="form-control" placeholder="Image URL...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="content">Content</label>
+                    <textarea id="content" class="form-control" placeholder="Write your post content..."></textarea>
+                </div>
