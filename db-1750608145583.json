@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Getting Started with React",
+      "author": "Sarah Johnson",
+      "date": "2024-01-15",
+      "image": "https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      "content": "React is a powerful JavaScript library for building user interfaces. In this tutorial, we'll cover the basics of setting up a React project, creating components, and managing state. By the end, you'll have a solid foundation to start building your own React applications."
+    },
+    {
+      "id": 2,
+      "title": "The Future of Web Development",
+      "author": "Michael Chen",
+      "date": "2024-01-12",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      "content": "Web development is evolving at an unprecedented pace. From serverless architectures to WebAssembly and progressive web apps, the landscape is changing rapidly. In this article, we explore the emerging technologies that are shaping the future of web development and how you can prepare for what's coming next."
+    },
+    {
+      "id": 3,
+      "title": "Design Systems That Scale",
+      "author": "Early Rodriguez",
+      "date": "2024-01-10",
+      "image": "https://images.unsplash.com/photo-1558655146-d09347e92766?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      "content": "Creating a design system that works for large organizations requires careful planning and execution. This guide covers best practices for building scalable design systems, including component architecture, documentation strategies, and governance models that ensure consistency across products and teams."
+    },
+    {
+      "id": 4,
+      "title": "TypeScript Best Practices",
+      "author": "David Kim",
+      "date": "2024-01-08",
+      "image": "https://images.unsplash.com/photo-1581276879432-15e50529f34b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      "content": "TypeScript brings static typing to JavaScript, catching errors early and improving developer productivity. In this article, we share best practices for using TypeScript effectively, including type annotations, interfaces, generics, and advanced patterns that will help you write more robust and maintainable code."
+    }
+  ]
+}
