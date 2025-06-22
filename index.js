@@ -88,3 +88,12 @@ const postList = document.getElementById('post-list');
         
             renderPostList(posts);
         }
+        function showEditForm(post) {
+            document.getElementById('edit-id').value = post.id;
+            document.getElementById('edit-title').value = post.title;
+            document.getElementById('edit-content').value = post.content;
+            
+            editPostFormContainer.classList.remove('hidden');
+            newPostFormContainer.classList.add('hidden');
+        }
+        
