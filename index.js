@@ -8,4 +8,12 @@ const postList = document.getElementById('post-list');
         const newPostFormContainer = document.getElementById('new-post-form-container');
         const editPostFormContainer = document.getElementById('edit-post-form-container');
         const postCountElement = document.getElementById('post-count');
+         let currentPostId = null;
+        let posts = [];
+
+        document.addEventListener('DOMContentLoaded', main);
         
+        function main() {
+            displayPosts();
+            setupEventListeners();
+        }
