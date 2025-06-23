@@ -25,8 +25,6 @@ async function displayPosts() {
         postCountElement.textContent = `${posts.length} ${posts.length === 1 ? 'post' : 'posts'}`;
         
         renderPostList(posts);
-
-        // Display first post if available
         if (posts.length > 0) {
             handlePostClick(posts[0]);
         } else {
@@ -36,8 +34,6 @@ async function displayPosts() {
         console.error('Error fetching posts:', error);
     }
 }
-
-// Render post list
 function renderPostList(posts) {
     postList.innerHTML = '';
 
@@ -45,7 +41,6 @@ function renderPostList(posts) {
         showEmptyState();
         return;
     }
-
     posts.forEach(post => {
         const postItem = document.createElement('div');
         postItem.className = 'post-item';
@@ -65,8 +60,6 @@ function renderPostList(posts) {
         postList.appendChild(postItem);
     });
 }
-
-// Handle post selection
 function handlePostClick(post) {
     currentPostId = post.id;
     
@@ -91,11 +84,8 @@ function handlePostClick(post) {
     document.getElementById('edit-btn').addEventListener('click', () => showEditForm(post));
     document.getElementById('delete-btn').addEventListener('click', () => deletePost(post.id));
     
-    // Update active state in list
     renderPostList(posts);
 }
-
-// Show empty state UI
 function showEmptyState() {
     postList.innerHTML = `
         <div class="empty-state">
@@ -113,10 +103,7 @@ function showEmptyState() {
         </div>
     `;
 }
-
-// Setup event listeners
 function setupEventListeners() {
-    // New post form
     newPostForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
@@ -142,8 +129,6 @@ function setupEventListeners() {
             console.error('Error creating post:', error);
         }
     });
-
-    // Edit post form
     editPostForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
@@ -168,14 +153,11 @@ function setupEventListeners() {
             console.error('Error updating post:', error);
         }
     });
-
-    // Form cancel buttons
     cancelAddBtn.addEventListener('click', () => newPostForm.reset());
     cancelEditBtn.addEventListener('click', () => {
         editPostFormContainer.classList.add('hidden');
     });
 
-    // Edit form display
     function showEditForm(post) {
         document.getElementById('edit-id').value = post.id;
         document.getElementById('edit-title').value = post.title;
@@ -184,7 +166,6 @@ function setupEventListeners() {
     }
 }
 
-// Delete post function
 async function deletePost(postId) {
     if (confirm('Are you sure you want to delete this post?')) {
         try {
